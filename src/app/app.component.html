@@ -1,3 +1,20 @@
-<h1>Hello, {{ title }}</h1>
-<h1>Best Mobile game is {{ game }}</h1>
-<h1>My favourite sports is {{ sports }}</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 2</title>
+</head>
+<body>
+<div class="container">
+  <h1>Cricket List</h1>
+  <div *ngFor="let cricket of cricketlist" class="user-card">
+    <h2>{{cricket.playerName}}</h2>
+    <p>Position: {{cricket.playerPosition}}</p>
+    <p>Jersey Number of Player: {{cricket.playerJerseyNumber}}</p>
+    <p>Age: {{cricket.playerAge}}</p>
+    <p>Player Awards: {{cricket.isplayerawards ? 'Yes' : 'No'}}</p>
+  </div>
+</div>
+
+</body>
+</html>
