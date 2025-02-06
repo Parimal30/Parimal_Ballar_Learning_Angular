@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {Cricket} from './Models/Cricket';
+import {Cricket} from './Shared/Models/Cricket';
+import {JsonPipe, NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NgForOf, JsonPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -17,7 +18,9 @@ export class AppComponent {
   cricket3: Cricket = {playerName:"Yuvraj Singh ", playerPosition:"Batsman", playerJerseyNumber:12 ,playerAge:43 , isplayerawards:false };
   cricket4: Cricket = {playerName:"Jasprit Bumrah", playerPosition:"Bowler", playerJerseyNumber:93 ,playerAge:31 , isplayerawards:true };
   cricket5: Cricket = {playerName:"Mohammed Siraj", playerPosition:"Bowler", playerJerseyNumber:73 ,playerAge:30 , isplayerawards:true};
+  cricket6: Cricket = {playerName:"Parimal Ballar", playerPosition:"All rounder", playerJerseyNumber:10 ,playerAge:21 , isplayerawards:false};
 
 
-  cricketlist: Cricket[] = [this.cricket1, this.cricket2, this.cricket3, this.cricket4, this.cricket5];
+
+  cricketlists: Cricket[] = [this.cricket1, this.cricket2, this.cricket3, this.cricket4, this.cricket5, this.cricket6];
 }
