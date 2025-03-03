@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {Cricket} from '../Shared/Models/Cricket';
 import {CricketListItemComponent} from '../cricket-list-item/cricket-list-item.component';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-cricket-list',
-  imports: [CricketListItemComponent],
+  imports: [NgForOf,CricketListItemComponent],
   templateUrl: './cricket-list.component.html',
   standalone: true,
   styleUrl: './cricket-list.component.css'
