@@ -1,12 +1,11 @@
-<app-cricket-list-item>
-  {{ cricketlist[0].playerName }}
-</app-cricket-list-item>
-<app-cricket-list-item>
-  {{ cricketlist[1].playerName }}
-</app-cricket-list-item>
-<app-cricket-list-item>
-  {{ cricketlist[2].playerName }}
-</app-cricket-list-item>
-<app-cricket-list-item>
-  {{ cricketlist[3].playerName }}
-</app-cricket-list-item>
+<div class="container">
+  <h1>Cricket List</h1>
+  <div *ngFor = "let cricket of cricketlist" class = "user-card">
+    <h2>{{cricket.playerName}}</h2>
+    <p>Position: {{cricket.playerPosition}}</p>
+    <p>Jersey Number: {{cricket.playerJerseyNumber}}</p>
+    <p>Age: {{cricket.playerAge}}</p>
+    <p>Player Rewards: {{cricket.isplayerawards ? 'Yes' : 'No'}}</p>
+  </div>
+</div>
+
