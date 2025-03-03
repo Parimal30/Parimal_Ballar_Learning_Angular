@@ -1,6 +1,16 @@
-<body>
-<table>
-  <tbody>
+<div class = "container">
+  <h2>Cricket List Component</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>JerseyNumber</th>
+      <th>Age</th>
+      <th>Rewards</th>
+    </tr>
+    </thead>
+    <tbody>
   <tr *ngFor = "let cricket of crickets">
     <td>{{cricket.playerName}}</td>
     <td>{{cricket.playerPosition}}</td>
@@ -10,5 +20,6 @@
   </tr>
   </tbody>
 </table>
-</body>
+<app-cricket-list-item[crickets]="selectedCricket"></app-cricket-list-item>
+</div>
 

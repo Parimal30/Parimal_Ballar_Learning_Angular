@@ -6,9 +6,9 @@ describe('CricketService', () => {
   let service: CricketService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      service: service = TestBed.inject(CricketService),
-    })
+    TestBed.configureTestingModule({});
+    service: service = TestBed.inject(CricketService);
+
   });
 
   it('should be created', () => {

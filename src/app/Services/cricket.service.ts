@@ -32,8 +32,12 @@ export class CricketService {
     return of(this.cricketList);
   }
 
-  getfootball(readplayerName: string): Observable<Cricket | undefined> {
+  getCricket(readplayerName: string): Observable<Cricket | undefined> {
     const cricket = this.cricketList.find(foot => foot.playerName === readplayerName);
     return of(cricket);
+  }
+  selectedCricket?: Cricket;
+  selectCricket(cricket:Cricket):void{
+    this.selectedCricket = cricket;
   }
 }

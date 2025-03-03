@@ -1,13 +1,15 @@
 import { Component, Input } from '@angular/core';
 import {Cricket} from '../Shared/Models/Cricket';
+import {crickets} from '../Shared/mockCricket';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-cricket-list-item',
-  imports: [],
+  imports: [NgIf],
   templateUrl: './cricket-list-item.component.html',
   standalone: true,
   styleUrl: './cricket-list-item.component.css'
 })
 export class CricketListItemComponent {
-@Input() cricket?: Cricket;
+@Input() crickets?: Cricket;
 }
