@@ -1,11 +1,14 @@
-<div class="container">
-  <h1>Cricket List</h1>
-  <div *ngFor = "let cricket of cricketlist" [ngClass]="cricket.bgClass">
-    <h2>{{cricket.playerName}}</h2>
-    <p>Position: {{cricket.playerPosition}}</p>
-    <p>Jersey Number: {{cricket.playerJerseyNumber}}</p>
-    <p>Age: {{cricket.playerAge}}</p>
-    <p>Player Rewards: {{cricket.isplayerawards ? 'Yes' : 'No'}}</p>
-  </div>
-</div>
+<body>
+<table>
+  <tbody>
+  <tr *ngFor = "let cricket of crickets">
+    <td>{{cricket.playerName}}</td>
+    <td>{{cricket.playerPosition}}</td>
+    <td>{{cricket.playerJerseyNumber}}</td>
+    <td>{{cricket.playerAge}}</td>
+    <td>{{cricket.isplayerawards ? 'Yes' : 'No'}}</td>
+  </tr>
+  </tbody>
+</table>
+</body>
 
