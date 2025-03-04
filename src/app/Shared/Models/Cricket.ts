@@ -4,6 +4,7 @@ export interface Cricket {
   playerJerseyNumber: number,
   playerAge: number;
   isplayerawards?:boolean;
-  bgClass: string;
+  pictureimage: string;
+
 
 }

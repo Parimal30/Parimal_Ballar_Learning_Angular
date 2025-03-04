@@ -1,2 +1,10 @@
-<app-cricket-list-item></app-cricket-list-item>
-<app-cricket-list></app-cricket-list>
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/crickets" routerLinkActive="active">Cricket List</a>
+    <a routerLink="/modify-list-item" routerLinkActive="active">Modify Cricket</a>
+  </nav>
+</div>
+<div class="container">
+  <h1>{{title}}</h1>
+  <router-outlet></router-outlet>
+</div>

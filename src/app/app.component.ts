@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {JsonPipe, NgForOf} from '@angular/common';
 import {CricketListComponent} from './cricket-list/cricket-list.component';
 import {CricketListItemComponent} from './cricket-list-item/cricket-list-item.component';
@@ -9,7 +9,7 @@ import {Cricket} from './Shared/Models/Cricket';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, JsonPipe,CricketListComponent, CricketListItemComponent],
+  imports: [RouterOutlet, NgForOf, JsonPipe, CricketListComponent, CricketListItemComponent, RouterLinkActive, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,25 +1,31 @@
-<div class = "container">
+<div class="container">
   <h2>Cricket List Component</h2>
   <table>
     <thead>
     <tr>
       <th>Name</th>
       <th>Position</th>
-      <th>JerseyNumber</th>
+      <th>Jersey Number</th>
       <th>Age</th>
       <th>Rewards</th>
+      <th>Images</th>
     </tr>
     </thead>
     <tbody>
-  <tr *ngFor = "let cricket of crickets" [routerLink]="['/crickets',cricket.playerName]">
-    <td>{{cricket.playerName}}</td>
-    <td>{{cricket.playerPosition}}</td>
-    <td>{{cricket.playerJerseyNumber}}</td>
-    <td>{{cricket.playerAge}}</td>
-    <td>{{cricket.isplayerawards ? 'Yes' : 'No'}}</td>
-  </tr>
-  </tbody>
-</table>
-<app-cricket-list-item[crickets]="selectedCricket"></app-cricket-list-item>
-</div>
+    <tr *ngFor="let cricket of crickets"
+        [routerLink]="['/crickets', cricket.playerName]"
+        (click)="selectCricket(cricket)">
+      <td>{{ cricket.playerName }}</td>
+      <td>{{ cricket.playerPosition }}</td>
+      <td>{{ cricket.playerJerseyNumber }}</td>
+      <td>{{ cricket.playerAge }}</td>
+      <td>{{ cricket.isplayerawards ? 'Yes' : 'No' }}</td>
+      <td>
+        <img [src]="cricket.pictureimage" alt="Player Image" width="50" height="50">
+      </td>
+    </tr>
+    </tbody>
+  </table>
 
+  <app-cricket-list-item [crickets]="selectedCricket"></app-cricket-list-item>
+</div>
