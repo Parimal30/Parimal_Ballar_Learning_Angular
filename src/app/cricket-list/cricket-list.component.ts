@@ -3,10 +3,11 @@ import {Cricket} from '../Shared/Models/Cricket';
 import {CricketListItemComponent} from '../cricket-list-item/cricket-list-item.component';
 import {NgForOf} from '@angular/common';
 import {CricketService} from '../Services/cricket.service';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-cricket-list',
-  imports: [NgForOf, CricketListItemComponent],
+  imports: [NgForOf, CricketListItemComponent, RouterLink],
   templateUrl: './cricket-list.component.html',
   standalone: true,
   styleUrl: './cricket-list.component.css'
